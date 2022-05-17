@@ -3,3 +3,59 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+
+```{r set up}
+SciViews::R
+
+```
+
+
+<!--% Importez les données. -->
+
+```{r}
+readxl::read_excel("./data/tableau des piège.xlsx") -> piege_0
+```
+
+
+```{r}
+readxl::read_excel("./data/tableau corrigé à utiliser.xlsx") -> Piege
+Piege
+```
+
+```{r}
+piege_fourmie <- filter(Piege, Famille == "Piège blanc" )
+piege_fourmie_1 <- select(piege_fourmie, Fourmicidae, Oedermeridae)
+piege_fourmie_1
+
+
+```
+
+
+
+
+```{r}
+chisq.test(piege_fourmie_1, p = c(Fourmicidae = 1/2, Oedermeridae = 1/2), rescale.p = FALSE)
+```
+
+```{r}
+piege_0
+```
+
+```{r}
+piege_Fourmicidae_2 <- filter(piege_0, Famille == "Fourmicidae")
+piege_fourmicidae_2a <- select(piege_Fourmicidae_2, Piège_blanc, Piège_bleu)
+```
+
+```{r}
+
+chisq.test(piege_fourmicidae_2a, p = c(Piège_blanc = 1/2, Piège_bleu = 1/2), rescale.p = FALSE)
+```
+```
+
+Iciiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+
+
+
+
+
+

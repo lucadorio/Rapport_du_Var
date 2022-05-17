@@ -1751,8 +1751,112 @@ pre code {
 
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU2NpVmlld3M6OlJcblxuYGBgIn0= -->
+<pre class="r"><code>SciViews::R
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!--% Importez les données. -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVhZHhsOjpyZWFkX2V4Y2VsKFwiLi9kYXRhL3RhYmxlYXUgZGVzIHBpw6hnZS54bHN4XCIpIC0+IHBpZWdlXzBcbmBgYCJ9 -->
+<pre class="r"><code>readxl::read_excel(&quot;./data/tableau des piège.xlsx&quot;) -&gt; piege_0</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVhZHhsOjpyZWFkX2V4Y2VsKFwiLi9kYXRhL3RhYmxlYXUgY29ycmlnw6kgw6AgdXRpbGlzZXIueGxzeFwiKSAtPiBQaWVnZVxuUGllZ2VcbmBgYCJ9 -->
+<pre class="r"><code>readxl::read_excel(&quot;./data/tableau corrigé à utiliser.xlsx&quot;) -&gt; Piege
+Piege</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6MTZ9LCJyZGYiOiJVa1JZTXdwWUNnQUFBQU1BQkFBRkFBTUZBQUFBQUFWVlZFWXRPQUFBQkFJQUFBQUJBQVFBQ1FBQUFBRjRBQUFERXdBQUFCQUFBQUFRQUFBQUJBQUFnQWtBQUFBTVVHbkRxR2RsSUdKc1lXNWpBQUNBQ1FBQUFBdFFhY09vWjJVZ1lteGxkUUFBZ0FrQUFBQU1VR25EcUdkbElHcGhkVzVsQUFDQUNRQUFBQnBRYWNPb1oyVWd3NkFnYldGMGFjT29jbVVnWnNPcFkyRnNaUUFBQUE0QUFBQUVRRDRBQUFBQUFBQkFKQUFBQUFBQUFEL3dBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU9BQUFBQkQvd0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRGdBQUFBUkFFQUFBQUFBQUFFQUlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBNEFBQUFFUUNnQUFBQUFBQUFBQUFBQUFBQUFBRC93QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFPQUFBQUJEL3dBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQURnQUFBQVJBQUFBQUFBQUFBRUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQTRBQUFBRVFBZ0FBQUFBQUFCQUVBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT0FBQUFCQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFFQVlBQUFBQUFBQUFBQUFEZ0FBQUFRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUJBRUFBQUFBQUFBQUFBQUE0QUFBQUVBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQVFGeUFBQUFBQUFBQUFBQU9BQUFBQkQvd0FBQUFBQUFBQUFBQUFBQUFBQUEvOEFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRGdBQUFBUUFBQUFBQUFBQUFEL3dBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBNEFBQUFFQUFBQUFBQUFBQUFBQUFBQUFBQUFBRUFRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFPQUFBQUJBQUFBQUFBQUFBQUFBQUFBQUFBQUFCQUVBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQURnQUFBQVFBQUFBQUFBQUFBQUFBQUFBQUFBQUFRRE1BQUFBQUFBQUFBQUFBQUFBQUFBQUFCQUlBQUFBQkFBUUFDUUFBQUFWdVlXMWxjd0FBQUJBQUFBQVFBQVFBQ1FBQUFBZEdZVzFwYkd4bEFBUUFDUUFBQUF0R2IzVnliV2xqYVdSaFpRQUVBQWtBQUFBTVQyVmtaWEp0WlhKcFpHRmxBQVFBQ1FBQUFBbEJZM0pwWkdsa1lXVUFCQUFKQUFBQURFRnVkR2h2YlhscGFXUmhaUUFFQUFrQUFBQUhRVzVrY21WdVlRQUVBQWtBQUFBSlNHRnNhV04wYVc1cEFBUUFDUUFBQUExQmNHaHliM0JvYjNKcFpHRmxBQVFBQ1FBQUFBcEJjR2h2WkdscFpHRmxBQVFBQ1FBQUFBcElhWE4wWlhKcFpHRmxBQVFBQ1FBQUFBeFRZMkZ5WVdKaFpXbGtZV1VBQkFBSkFBQUFDbE5oYkhScFkybGtZV1VBQkFBSkFBQUFDVk5oZEhseWFXUmhaUUFFQUFrQUFBQUxRblZ3Y21WemRHbGtZV1VBQkFBSkFBQUFEVU5vY25semIyMWxiR2xrWVdVQUFJQUpBQUFBS0UxcGJuVnpZM1ZzWlNCdGIzVmphR1YwZEdVZ2JtOXVJR2xrWlc1MGFXWnB3NmxsSUNBZ1VEVUFBQVFDQUFBQUFRQUVBQWtBQUFBSmNtOTNMbTVoYldWekFBQUFEUUFBQUFLQUFBQUEvLy8vL0FBQUJBSUFBQUFCQUFRQUNRQUFBQVZqYkdGemN3QUFBQkFBQUFBQkFBUUFDUUFBQUFwa1lYUmhMbVp5WVcxbEFBQUEvZ0FBQkFJQUFBQUJBQVFBQ1FBQUFBZHZjSFJwYjI1ekFBQUNFd0FBQUFVQUFBQVFBQUFBQVFBRUFBa0FBQUFCY2dBQUFCQUFBQUFCQUFRQUNRQUFBQkYxYm01aGJXVmtMV05vZFc1ckxURXdNQUFBQUFvQUFBQUJBQUFBQUFBQUFBMEFBQUFCQUFBQUJBQUFBQTBBQUFBQkFBQUFFQUFBQkFJQUFBTC9BQUFBRUFBQUFBVUFCQUFKQUFBQUJtVnVaMmx1WlFBRUFBa0FBQUFGYkdGaVpXd0FCQUFKQUFBQURuSnZkMjVoYldWekxuQnlhVzUwQUFRQUNRQUFBQXB5YjNkekxuUnZkR0ZzQUFRQUNRQUFBQXBqYjJ4ekxuUnZkR0ZzQUFBQS9nQUFBUDQ9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Famille"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Fourmicidae"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Oedermeridae"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Acrididae"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Anthomyiidae"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Andrena"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Halictini"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Aphrophoridae"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Aphodiidae"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["Histeridae"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Scarabaeidae"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["Salticidae"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["Satyridae"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["Buprestidae"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["Chrysomelidae"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["Minuscule mouchette non identifiée   P5"],"name":[16],"type":["dbl"],"align":["right"]}],"data":[{"1":"Piège blanc","2":"30","3":"1","4":"4","5":"12","6":"1","7":"2","8":"3","9":"0","10":"0","11":"0","12":"1","13":"0","14":"0","15":"0","16":"0"},{"1":"Piège bleu","2":"10","3":"0","4":"3","5":"0","6":"0","7":"2","8":"4","9":"0","10":"0","11":"0","12":"0","13":"1","14":"0","15":"0","16":"0"},{"1":"Piège jaune","2":"1","3":"0","4":"0","5":"1","6":"0","7":"0","8":"0","9":"0","10":"0","11":"0","12":"1","13":"0","14":"4","15":"4","16":"19"},{"1":"Piège à matière fécale","2":"0","3":"0","4":"0","5":"0","6":"0","7":"0","8":"0","9":"6","10":"4","11":"114","12":"0","13":"0","14":"0","15":"0","16":"0"}],"options":{"columns":{"min":{},"max":[10],"total":[16]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGllZ2VfZm91cm1pZSA8LSBmaWx0ZXIoUGllZ2UsIEZhbWlsbGUgPT0gXCJQacOoZ2UgYmxhbmNcIiApXG5waWVnZV9mb3VybWllXzEgPC0gc2VsZWN0KHBpZWdlX2ZvdXJtaWUsIEZvdXJtaWNpZGFlLCBPZWRlcm1lcmlkYWUpXG5waWVnZV9mb3VybWllXzFcbmBgYCJ9 -->
+<pre class="r"><code>piege_fourmie &lt;- filter(Piege, Famille == &quot;Piège blanc&quot; )
+piege_fourmie_1 &lt;- select(piege_fourmie, Fourmicidae, Oedermeridae)
+piege_fourmie_1</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MSwibmNvbCI6Mn0sInJkZiI6IlVrUllNd3BZQ2dBQUFBTUFCQUFGQUFNRkFBQUFBQVZWVkVZdE9BQUFCQUlBQUFBQkFBUUFDUUFBQUFGNEFBQURFd0FBQUFJQUFBQU9BQUFBQVVBK0FBQUFBQUFBQUFBQURnQUFBQUUvOEFBQUFBQUFBQUFBQkFJQUFBQUJBQVFBQ1FBQUFBVnVZVzFsY3dBQUFCQUFBQUFDQUFRQUNRQUFBQXRHYjNWeWJXbGphV1JoWlFBRUFBa0FBQUFNVDJWa1pYSnRaWEpwWkdGbEFBQUVBZ0FBQUFFQUJBQUpBQUFBQ1hKdmR5NXVZVzFsY3dBQUFBMEFBQUFDZ0FBQUFQLy8vLzhBQUFRQ0FBQUFBUUFFQUFrQUFBQUZZMnhoYzNNQUFBQVFBQUFBQVFBRUFBa0FBQUFLWkdGMFlTNW1jbUZ0WlFBQUFQNEFBQVFDQUFBQUFRQUVBQWtBQUFBSGIzQjBhVzl1Y3dBQUFoTUFBQUFGQUFBQUVBQUFBQUVBQkFBSkFBQUFBWElBQUFBUUFBQUFBUUFFQUFrQUFBQVJkVzV1WVcxbFpDMWphSFZ1YXkweE1ERUFBQUFLQUFBQUFRQUFBQUFBQUFBTkFBQUFBUUFBQUFFQUFBQU5BQUFBQVFBQUFBSUFBQVFDQUFBQy93QUFBQkFBQUFBRkFBUUFDUUFBQUFabGJtZHBibVVBQkFBSkFBQUFCV3hoWW1Wc0FBUUFDUUFBQUE1eWIzZHVZVzFsY3k1d2NtbHVkQUFFQUFrQUFBQUtjbTkzY3k1MGIzUmhiQUFFQUFrQUFBQUtZMjlzY3k1MGIzUmhiQUFBQVA0QUFBRCsifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Fourmicidae"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Oedermeridae"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"30","2":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbk5BXG5gYGAifQ== -->
+<pre class="r"><code>NA
+NA</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hpc3EudGVzdChwaWVnZV9mb3VybWllXzEsIHAgPSBjKEZvdXJtaWNpZGFlID0gMS8yLCBPZWRlcm1lcmlkYWUgPSAxLzIpLCByZXNjYWxlLnAgPSBGQUxTRSlcbmBgYCJ9 -->
+<pre class="r"><code>chisq.test(piege_fourmie_1, p = c(Fourmicidae = 1/2, Oedermeridae = 1/2), rescale.p = FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cdENoaS1zcXVhcmVkIHRlc3QgZm9yIGdpdmVuIHByb2JhYmlsaXRpZXNcblxuZGF0YTogIHBpZWdlX2ZvdXJtaWVfMVxuWC1zcXVhcmVkID0gMjcuMTI5LCBkZiA9IDEsIHAtdmFsdWUgPSAxLjkwM2UtMDdcbiJ9 -->
+<pre><code>
+    Chi-squared test for given probabilities
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoK</div>
+data:  piege_fourmie_1
+X-squared = 27.129, df = 1, p-value = 1.903e-07</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGllZ2VfMFxuYGBgIn0= -->
+<pre class="r"><code>piege_0</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MTUsIm5jb2wiOjV9LCJyZGYiOiJVa1JZTXdwWUNnQUFBQU1BQkFBRkFBTUZBQUFBQUFWVlZFWXRPQUFBQkFJQUFBQUJBQVFBQ1FBQUFBRjRBQUFERXdBQUFBVUFBQUFRQUFBQUR3QUVBQWtBQUFBTFJtOTFjbTFwWTJsa1lXVUFCQUFKQUFBQURFOWxaR1Z5YldWeWFXUmhaUUFFQUFrQUFBQUhRV055YVdSaFpRQUVBQWtBQUFBTVFXNTBhRzl0ZVdscFpHRmxBQVFBQ1FBQUFBZEJibVJ5Wlc1aEFBUUFDUUFBQUFsSVlXeHBZM1JwYm1rQUJBQUpBQUFBRFVGd2FISnZjR2h2Y21sa1lXVUFCQUFKQUFBQUNrRndhRzlrYVdsa1lXVUFCQUFKQUFBQUNraHBjM1JsY21sa1lXVUFCQUFKQUFBQURGTmpZWEpoWW1GbGFXUmhaUUFFQUFrQUFBQUtVMkZzZEdsamFXUmhaUUFFQUFrQUFBQUpVMkYwZVhKcFpHRmxBQVFBQ1FBQUFBdENkWEJ5WlhOMGFXUmhaUUFFQUFrQUFBQU5RMmh5ZVhOdmJXVnNhV1JoWlFBQWdBa0FBQUFqYldsdWRYTmpkV3hsSUcxdmRXTm9aWFIwWlNCdWIyNGdhV1JsYm5ScFptbkRxV1VBQUFBT0FBQUFEMEErQUFBQUFBQUFQL0FBQUFBQUFBQkFFQUFBQUFBQUFFQW9BQUFBQUFBQVAvQUFBQUFBQUFCQUFBQUFBQUFBQUVBSUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFQL0FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBNEFBQUFQUUNRQUFBQUFBQUFBQUFBQUFBQUFBRUFJQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFFQUFBQUFBQUFBQVFCQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBRC93QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFEZ0FBQUE4LzhBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEvOEFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUQvd0FBQUFBQUFBQUFBQUFBQUFBQUJBRUFBQUFBQUFBRUFRQUFBQUFBQUFRRE1BQUFBQUFBQUFBQUFPQUFBQUR3QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFRQmdBQUFBQUFBQkFFQUFBQUFBQUFFQmNnQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQkFJQUFBQUJBQVFBQ1FBQUFBVnVZVzFsY3dBQUFCQUFBQUFGQUFRQUNRQUFBQWRHWVcxcGJHeGxBQUNBQ1FBQUFBeFFhY09vWjJWZllteGhibU1BQUlBSkFBQUFDMUJwdzZoblpWOWliR1YxQUFDQUNRQUFBQXhRYWNPb1oyVmZhbUYxYm1VQUFJQUpBQUFBR1ZCcHc2aG5YOE9nWDIxaGRHbkRxSEpsWDJiRHFXTmhiR1VBQUFRQ0FBQUFBUUFFQUFrQUFBQUpjbTkzTG01aGJXVnpBQUFBRFFBQUFBS0FBQUFBLy8vLzhRQUFCQUlBQUFBQkFBUUFDUUFBQUFWamJHRnpjd0FBQUJBQUFBQUJBQVFBQ1FBQUFBcGtZWFJoTG1aeVlXMWxBQUFBL2dBQUJBSUFBQUFCQUFRQUNRQUFBQWR2Y0hScGIyNXpBQUFDRXdBQUFBVUFBQUFRQUFBQUFRQUVBQWtBQUFBQmNnQUFBQkFBQUFBQkFBUUFDUUFBQUJGMWJtNWhiV1ZrTFdOb2RXNXJMVEV3TXdBQUFBb0FBQUFCQUFBQUFBQUFBQTBBQUFBQkFBQUFEd0FBQUEwQUFBQUJBQUFBQlFBQUJBSUFBQUwvQUFBQUVBQUFBQVVBQkFBSkFBQUFCbVZ1WjJsdVpRQUVBQWtBQUFBRmJHRmlaV3dBQkFBSkFBQUFEbkp2ZDI1aGJXVnpMbkJ5YVc1MEFBUUFDUUFBQUFweWIzZHpMblJ2ZEdGc0FBUUFDUUFBQUFwamIyeHpMblJ2ZEdGc0FBQUEvZ0FBQVA0PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Famille"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Piège_blanc"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Piège_bleu"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Piège_jaune"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Pièg_à_matière_fécale"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"Fourmicidae","2":"30","3":"10","4":"1","5":"0"},{"1":"Oedermeridae","2":"1","3":"0","4":"0","5":"0"},{"1":"Acridae","2":"4","3":"3","4":"0","5":"0"},{"1":"Anthomyiidae","2":"12","3":"0","4":"1","5":"0"},{"1":"Andrena","2":"1","3":"0","4":"0","5":"0"},{"1":"Halictini","2":"2","3":"2","4":"0","5":"0"},{"1":"Aphrophoridae","2":"3","3":"4","4":"0","5":"0"},{"1":"Aphodiidae","2":"0","3":"0","4":"0","5":"6"},{"1":"Histeridae","2":"0","3":"0","4":"0","5":"4"},{"1":"Scarabaeidae","2":"0","3":"0","4":"0","5":"114"},{"1":"Salticidae","2":"1","3":"0","4":"1","5":"0"},{"1":"Satyridae","2":"0","3":"1","4":"0","5":"0"},{"1":"Buprestidae","2":"0","3":"0","4":"4","5":"0"},{"1":"Chrysomelidae","2":"0","3":"0","4":"4","5":"0"},{"1":"minuscule mouchette non identifiée","2":"0","3":"0","4":"19","5":"0"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[15]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGllZ2VfRm91cm1pY2lkYWVfMiA8LSBmaWx0ZXIocGllZ2VfMCwgRmFtaWxsZSA9PSBcIkZvdXJtaWNpZGFlXCIpXG5waWVnZV9mb3VybWljaWRhZV8yYSA8LSBzZWxlY3QocGllZ2VfRm91cm1pY2lkYWVfMiwgUGnDqGdlX2JsYW5jLCBQacOoZ2VfYmxldSlcbmBgYCJ9 -->
+<pre class="r"><code>piege_Fourmicidae_2 &lt;- filter(piege_0, Famille == &quot;Fourmicidae&quot;)
+piege_fourmicidae_2a &lt;- select(piege_Fourmicidae_2, Piège_blanc, Piège_bleu)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5jaGlzcS50ZXN0KHBpZWdlX2ZvdXJtaWNpZGFlXzJhLCBwID0gYyhQacOoZ2VfYmxhbmMgPSAxLzIsIFBpw6hnZV9ibGV1ID0gMS8yKSwgcmVzY2FsZS5wID0gRkFMU0UpXG5gYGAifQ== -->
+<pre class="r"><code>
+chisq.test(piege_fourmicidae_2a, p = c(Piège_blanc = 1/2, Piège_bleu = 1/2), rescale.p = FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cdENoaS1zcXVhcmVkIHRlc3QgZm9yIGdpdmVuIHByb2JhYmlsaXRpZXNcblxuZGF0YTogIHBpZWdlX2ZvdXJtaWNpZGFlXzJhXG5YLXNxdWFyZWQgPSAxMCwgZGYgPSAxLCBwLXZhbHVlID0gMC4wMDE1NjVcbiJ9 -->
+<pre><code>
+    Chi-squared test for given probabilities
+
+data:  piege_fourmicidae_2a
+X-squared = 10, df = 1, p-value = 0.001565</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>```</p>
+<p>Iciiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
+<!-- rnb-text-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCmBgYHtyIHNldCB1cH0KU2NpVmlld3M6OlIKCmBgYAoKCjwhLS0lIEltcG9ydGV6IGxlcyBkb25uw6llcy4gLS0+CgpgYGB7cn0KcmVhZHhsOjpyZWFkX2V4Y2VsKCIuL2RhdGEvdGFibGVhdSBkZXMgcGnDqGdlLnhsc3giKSAtPiBwaWVnZV8wCmBgYAoKCmBgYHtyfQpyZWFkeGw6OnJlYWRfZXhjZWwoIi4vZGF0YS90YWJsZWF1IGNvcnJpZ8OpIMOgIHV0aWxpc2VyLnhsc3giKSAtPiBQaWVnZQpQaWVnZQpgYGAKCmBgYHtyfQpwaWVnZV9mb3VybWllIDwtIGZpbHRlcihQaWVnZSwgRmFtaWxsZSA9PSAiUGnDqGdlIGJsYW5jIiApCnBpZWdlX2ZvdXJtaWVfMSA8LSBzZWxlY3QocGllZ2VfZm91cm1pZSwgRm91cm1pY2lkYWUsIE9lZGVybWVyaWRhZSkKcGllZ2VfZm91cm1pZV8xCgoKYGBgCgoKCgpgYGB7cn0KY2hpc3EudGVzdChwaWVnZV9mb3VybWllXzEsIHAgPSBjKEZvdXJtaWNpZGFlID0gMS8yLCBPZWRlcm1lcmlkYWUgPSAxLzIpLCByZXNjYWxlLnAgPSBGQUxTRSkKYGBgCgpgYGB7cn0KcGllZ2VfMApgYGAKCmBgYHtyfQpwaWVnZV9Gb3VybWljaWRhZV8yIDwtIGZpbHRlcihwaWVnZV8wLCBGYW1pbGxlID09ICJGb3VybWljaWRhZSIpCnBpZWdlX2ZvdXJtaWNpZGFlXzJhIDwtIHNlbGVjdChwaWVnZV9Gb3VybWljaWRhZV8yLCBQacOoZ2VfYmxhbmMsIFBpw6hnZV9ibGV1KQpgYGAKCmBgYHtyfQoKY2hpc3EudGVzdChwaWVnZV9mb3VybWljaWRhZV8yYSwgcCA9IGMoUGnDqGdlX2JsYW5jID0gMS8yLCBQacOoZ2VfYmxldSA9IDEvMiksIHJlc2NhbGUucCA9IEZBTFNFKQpgYGAKYGBgCgpJY2lpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpaWlpCgoKCgoKCg==</div>
 
 
 
