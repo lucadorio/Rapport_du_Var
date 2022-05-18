@@ -50,9 +50,91 @@ piege_fourmicidae_2a <- select(piege_Fourmicidae_2, Piège_blanc, Piège_bleu)
 
 chisq.test(piege_fourmicidae_2a, p = c(Piège_blanc = 1/2, Piège_bleu = 1/2), rescale.p = FALSE)
 ```
+
+
+
+
+teste pour voir si on a le même nombre d'insecte dans chaque piège
+
+
+```{r}
+total <- filter(piege_0, Famille == "Total")
+total <- select(total, - Famille)
+total
 ```
 
-Iciiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+```{r}
+chisq.test(total, p = c(Piège_blanc = 1/4, Piège_bleu = 1/4, Piège_jaune = 1/4, Piège_à_matière_fécale= 1/4), rescale.p = FALSE)
+```
+
+teste pour voir si l'on a autant d'insectes dans les trois piège sans celui caca
+
+```{r}
+```
+
+
+```{r}
+total_3 <- filter(piege_0, Famille == "Total")
+total_3 <- select(total_3, - Famille, - Piège_à_matière_fécale)
+total_3
+```
+
+
+
+```{r}
+chisq.test(total_3, p = c(Piège_blanc = 1/3, Piège_bleu = 1/3, Piège_jaune = 1/3), rescale.p = FALSE)
+```
+
+teste pour voir si on a autant d'hymeno dans les trois piège à couleurs
+
+
+```{r}
+hymeno <- filter(piege_0, Famille == "Hymenoptères")
+hymeno <- select(hymeno, - Famille, - Piège_à_matière_fécale)
+hymeno
+```
+
+```{r}
+chisq.test(total_3, p = c(Piège_blanc = 1/3, Piège_bleu = 1/3, Piège_jaune = 1/3), rescale.p = FALSE)
+```
+
+Teste pour comparé le piege blanc et bleu avec les hymeno
+
+
+```{r}
+hymeno_2 <- filter(piege_0, Famille == "Hymenoptères")
+hymeno_2 <- select(hymeno_2, - Famille, - Piège_à_matière_fécale, - Piège_jaune)
+hymeno_2
+```
+
+
+
+```{r}
+chisq.test(hymeno_2, p = c(Piège_blanc = 1/2, Piège_bleu = 1/2), rescale.p = FALSE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
